@@ -13937,7 +13937,12 @@ ul.list-unstyled li a:hover {
     stroke-dashoffset: -136px;
   }
 }
-
-
-
+/* Fix for Owl Carousel mobile scrolling issue */
+.owl-carousel.owl-drag .owl-item,
+.owl-carousel,
+.owl-carousel .owl-stage,
+.owl-carousel .owl-stage-outer {
+  touch-action: pan-y !important;
+  -ms-touch-action: pan-y !important;
+}
 
