@@ -12781,9 +12781,43 @@ h5,
 }
 
 .progress-wrap h3 {
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 10px;
   font-weight: 500;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+  animation: iconFloat 3s ease-in-out infinite;
+}
+
+.progress-wrap:hover h3 {
+  color: #ffbd39;
+}
+
+/* Floating Animation for Icons & Text */
+@keyframes iconFloat {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Original Logo Colors for Skills */
+
+.progress-wrap h3 i.fa-python { color: #FFD43B; transition: color 0.3s ease; }
+.progress-wrap h3 i.fa-database { color: #336791; transition: color 0.3s ease; }
+.progress-wrap h3 i.fa-redhat { color: #F1502F; transition: color 0.3s ease; }
+.progress-wrap h3 i.fa-aws { color: #FF9900; transition: color 0.3s ease; }
+.progress-wrap h3 i.fa-network-wired { color: var(--blue); transition: color 0.3s ease; }
+.progress-wrap h3 i.fa-git-alt { color: #F1502F; transition: color 0.3s ease; }
+.progress-wrap h3 i.fa-microsoft { color: #00A4EF; transition: color 0.3s ease; }
+.progress-wrap h3 i.fa-jira { color: #0052CC; transition: color 0.3s ease; }
+.progress-wrap h3 i.fa-server { color: #0065AB; transition: color 0.3s ease; }
+.progress-wrap h3 i.fa-windows { color: #0078D6; transition: color 0.3s ease; }
+.progress-wrap h3 i.fa-github { color: #FFFFFF; transition: color 0.3s ease; }
+.progress-wrap h3 i.fa-users { color: #17A2B8; transition: color 0.3s ease; }
+
+.progress-wrap:hover h3 {
+  color: #ffbd39 !important;
 }
 
 .progress {
@@ -13946,3 +13980,17 @@ ul.list-unstyled li a:hover {
   -ms-touch-action: pan-y !important;
 }
 
+/* Global Interactive Button Effects (Hire me, Download CV, Send Message, etc) */
+.btn {
+  transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.3s ease, color 0.3s ease !important;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 40px rgba(255, 189, 57, 0.4); /* Subtle theme-colored glow */
+}
+
+.btn:active {
+  transform: translateY(4px) scale(0.96) !important;
+  box-shadow: inset 0 6px 10px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(255, 189, 57, 0.2) !important;
+}
